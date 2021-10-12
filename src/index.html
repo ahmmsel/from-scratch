@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- fonst -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap" rel="stylesheet">
+<!-- icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<!-- css-link -->
+  <style>
+    *{
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      line-height: 2;
+      text-transform: capitalize;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    a{
+      text-decoration: none;
+    }
+
+    li{
+      list-style: none;
+    }
+
+    img{
+      width: 100%;
+    }
+  </style>
+  <title class="site-title"></title>
+</head>
+<body>
+
+<!-- header -->
+  <header class="main-header">
+    <div class="logo">
+      <h1 class="site-title"></h1>
+      <small><span class="site-title"></span> your knowledge</small>
+    </div>
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li class="nav-items"><a href="#home">home</a></li>
+        <li class="nav-items"><a href="#services">services</a></li>
+        <li class="nav-items"><a href="#portfolio">portfolio</a></li>
+        <li class="nav-items"><a href="#contact">contact us</a></li>
+      </ul>
+    </nav>
+  </header>
+<!-- end-header -->
+
+<!-- landing-page -->
+  <main class="landing-page">
+<!-- landing-hero -->
+    <section class="hero">
+      <div class="overlay">
+        <div class="hero-text">
+          <h1>creative desgin</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+        </div>
+      </div>
+    </section>
+<!-- end-landing-hero -->
+
+<!-- landing-services -->
+    <section class="landing-services" id="services">
+      <article class="landing-content">
+        <header class="services-header">
+          <div class="text">
+            <h1>tab one</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, totam.</p>
+          </div>
+          <form class="services-form">
+            <button type="button">show</button>
+          </form>
+        </header>
+        <footer class="services-footer">
+          <figure><img src="./images/img1.svg" alt="" /></figure>
+        </footer>
+      </article>
+    </section>
+<!-- end-landing-services -->
+  </main>
+<!-- end-landing-page -->
+
+<!-- container -->
+  <main class="container">
+<!-- portfolio-section -->
+    <main class="portfolio" id="portfolio">
+<!-- filter -->
+      <section>
+        <label for="projects">filter</label>
+         <select name="projects">
+           <optgroup label="ALL">
+             <option value="">all projects</option>
+           </optgroup>
+           <optgroup label="TEMPLATES">
+             <option value="">html only</option>
+             <option value="">complate project</option>
+           </optgroup>
+           <optgroup label="REACT JS">
+             <option value="">react website</option>
+             <option value="">next js</option>
+           </optgroup>
+         </select>
+      </section>
+<!-- end-filter -->
+      <section class="project-section">
+        <div class="projects">
+          <article class="project-content">
+            <header class="project-header">
+              <figure><img src="./images/img3.svg" alt="" /></figure>
+            </header>
+            <footer class="project-footer">
+              <div class="text">
+                <h1>project</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+              <form class="project-form">
+                <button type="button">view</button>
+              </form>
+            </footer>
+          </article>
+        </div>
+      </section>
+    </main>
+<!-- portfolio-section -->
+
+<!-- about -->
+    <main class="about">
+      <section class="about-section">
+        <article class="about-content">
+          <header class="about-header">
+            <div class="text">
+              <h1>about me</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid fugit esse, suscipit, fuga cupiditate accusamus rerum molestias blanditiis non veniam.</p>
+            </div>
+          </header>
+          <footer class="about-footer">
+            <figure><img src="./images/img2.svg" alt="" /></figure>
+          </footer>
+        </article>
+      </section>
+    </main>
+<!-- end-about -->
+  </main>
+<!-- end-container -->
+<footer class="main-footer">
+  <nav class="footer-nav">
+    <ul class="nav-list">
+      <li class="nav-items"><a href="#home">home</a></li>
+      <li class="nav-items"><a href="#services">services</a></li>
+      <li class="nav-items"><a href="#portfolio">portfolio</a></li>
+      <li class="nav-items"><a href="#contact">contact us</a></li>
+    </ul>
+  </nav>
+  <p class="site-title"></p>
+</footer>
+
+<!-- js-link -->
+  <script type="text/javascript">
+      const siteTitle = document.querySelectorAll(".site-title");
+      // site-title
+      siteTitle.forEach((title) => {
+        title.innerHTML += "share"
+      });
+      // site-title
+  </script>
+</body>
+</html>
