@@ -1,5 +1,6 @@
 import Header from './header';
 import Tabs from './tabs';
+import Portfolio from './portfolio/portfolio';
 
 const siteTitle = document.querySelectorAll(".site-title");
 // site-title
@@ -12,3 +13,5 @@ siteTitle.forEach((title) => {
 Header();
 // end header
 Tabs();
+
+Portfolio();

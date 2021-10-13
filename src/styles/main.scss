@@ -4,6 +4,10 @@
   background-color: $primary;
   position: relative;
   z-index: 9999;
+  transition: ease-in-out .5s;
+  position: fixed;
+  top: 0;
+  left: 0; right: 0;
   .main-header{
     display: flex;
     justify-content: space-between;
@@ -37,10 +41,6 @@
 }
 
 .header-fixed{
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
   opacity: .8;
 }
 
