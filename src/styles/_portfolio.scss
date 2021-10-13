@@ -1,0 +1,47 @@
+.portfolio{
+  .section-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    @extend %section-title;
+  }
+  .project-section{
+    .projects{
+      @include grid(4rem, 340px);
+      .project-content{
+        padding: 1rem;
+        @extend %card;
+        .project-header{
+          figure{
+            img{
+              width: 100%;
+              height: 30vh;
+            }
+          }
+        }
+        .project-footer{
+          .project-form{
+            button{
+              @include primary-button(.5rem, 1rem, 1.2rem);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $ms) {
+  .portfolio{
+    .section-title{
+      justify-content: center;
+      flex-direction: column;
+    }
+    .project-section{
+      .projects{
+        @include grid(4rem, 240px);
+      }
+    }
+  }
+}

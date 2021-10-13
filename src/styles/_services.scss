@@ -1,0 +1,76 @@
+.landing-services{
+  @extend %card;
+  margin-bottom: 5rem;
+  .tabs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: $main;
+    color: $secondery;
+    .tab{
+      cursor: pointer;
+      padding: 0 3rem;
+      font-size: 1.5em;
+    }
+    .active{
+      background-color: $secondery;
+      color: text-color($secondery);
+      padding: 0 2rem;
+    }
+  }
+  .landing-content:not(:first-child){
+    display: none;
+    opacity: 0;
+    transition: ease-in-out .7s;
+  }
+  .landing-content.active{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    transition: ease .7s;
+    opacity: .8;
+    .services-header{
+      width: 50%;
+      .text{
+        text-transform: uppercase;
+        font-size: 1.5em;
+      }
+    }
+    .services-footer{
+      figure{
+        @extend %figure;
+      }
+    }
+  }
+}
+
+@media (max-width: $ms) {
+  .landing-services{
+    .tabs{
+      color: $secondery;
+      flex-direction: column;
+      .tab{
+        width: 100%;
+        text-align: center;
+        padding: 0;
+      }
+    }
+    .landing-content.active{
+      justify-content: center;
+      flex-direction: column;
+      .services-header{
+        width: 100%;
+        .text{
+          font-size: 1em;
+        }
+      }
+      .services-footer{
+        figure{
+        }
+      }
+    }
+  }
+
+}

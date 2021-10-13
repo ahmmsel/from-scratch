@@ -1,0 +1,15 @@
+@mixin primary-button($py, $px, $fs) {
+  background-color: transparent;
+  color: $primary;
+  padding: $py $px;
+  cursor: pointer;
+  border-radius: .3rem;
+  outline: none;
+  border: solid .1rem $main;
+  font-size: $fs;
+  &:hover{
+    background-color: $main;
+    color: $secondery;
+    transition: ease-in-out .5s;
+  }
+}

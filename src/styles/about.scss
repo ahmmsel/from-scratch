@@ -1,0 +1,35 @@
+.about{
+  .about-section{
+    .about-content{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .about-header{
+        width: 50%;
+        text-transform: uppercase;
+      }
+      .about-footer{
+        figure{
+          @extend %figure;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $ms) {
+  .about{
+    .about-section{
+      .about-content{
+        justify-content: center;
+        flex-flow: column wrap;
+        .about-header{
+          width: 100%;
+          padding: 1rem 0;
+        }
+        .about-footer{
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,159 @@
+// vars
+$main: #c8584c;
+$primary: #242b2e;
+$secondery: #f3f3f3;
+$overlay: rgba(0, 0, 0, .8);
+$ms: 768px;
+
+@import "button";
+
+*{
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  line-height: 2;
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+html{
+  overflow-x: hidden;
+  // font-size: 150%
+}
+
+body{
+  background-image: linear-gradient(#f3f3f3, #E5DDCD, #aaa);
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+.container{
+  margin: 0 auto;
+  width: 90%;
+  max-width: 70rem;
+}
+
+// mixin
+@mixin grid($grid-gap, $grid-columns) {
+  display: grid;
+  gap: $grid-gap;
+  grid-template-columns: repeat(auto-fill, minmax($grid-columns, 1fr));
+}
+// mixin
+
+// extends
+%figure{
+  img{
+    width: 100%;
+  }
+}
+
+%card{
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  transition: all 500ms;
+}
+
+%section-title{
+  margin: 2rem 0;
+  opacity: .8;
+}
+// end extends
+
+// function
+@function text-color($color) {
+  @if (lightness($color) > 70) {
+    @return $primary;
+  }@else{
+    @return $secondery;
+  }
+}
+
+// props
+
+$props: (0,1,2,3,4,5,6,7,8,9,10);
+
+@each $prop in $props {
+  .m-#{$prop}{
+    margin: #{$prop}rem;
+  }
+
+  .mx-#{$prop}{
+    margin: 0 #{$prop}rem;
+  }
+
+  .my-#{$prop}{
+    margin: #{$prop}rem 0;
+  }
+
+  .p-#{$prop}{
+    padding: #{$prop}rem;
+  }
+
+  .px-#{$prop}{
+    padding: 0 #{$prop}rem;
+  }
+
+  .py-#{$prop}{
+    padding: #{$prop}rem 0;
+  }
+
+
+  .fs-#{$prop}{
+    font-size: #{$prop}rem;
+  }
+// mobile screen props
+  .ms-p-#{$prop}{
+    @media (max-width: $ms) {
+      padding: #{$prop}px !important;
+    }
+  }
+
+  .ms-px-#{$prop}{
+    @media (max-width: $ms) {
+      padding: 0 #{$prop}px !important;
+    }
+  }
+
+  .ms-py-#{$prop}{
+    @media (max-width: $ms) {
+      margin: #{$prop}px 0 !important;
+    }
+  }
+
+  .ms-m-#{$prop}{
+    @media (max-width: $ms) {
+      margin: #{$prop}px !important;
+    }
+  }
+
+  .ms-mx-#{$prop}{
+    @media (max-width: $ms) {
+      margin: 0 #{$prop}px !important;
+    }
+  }
+
+  .ms-my-#{$prop}{
+    @media (max-width: $ms) {
+      margin: #{$prop}px 0 !important;
+    }
+  }
+
+  .ms-fs-#{$prop}{
+    @media (max-width: $ms) {
+      font-size: #{$prop * 10}px !important;
+    }
+  }
+// end mobile screen props
+}
+
+@media (max-width: $ms) {
+  html{
+    // font-size: 150%;
+  }
+}
